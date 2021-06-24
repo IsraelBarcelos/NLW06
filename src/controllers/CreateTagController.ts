@@ -9,7 +9,9 @@ class CreateTagController {
 
         const createTagService = new CreateTagService();
 
-        const tag = await createTagService.execute(name);
+        const tag = await createTagService.execute({name});
+
+        return response.json(tag)
 
     }
 }
